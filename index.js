@@ -7,10 +7,13 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.use(SongRouter);
+app.use(InitRouter)
+app.use(UserRouter)
+app.use(SongRouter)
+app.use(ArtistRouter)
 
 app.listen(port, () => {
-	console.log(`Server kører på port ${port}`);
+	console.log(`Webserver running  ${port}`);
 })
 
 // app.get('/', (request, response) => {

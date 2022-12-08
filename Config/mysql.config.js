@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+
 mysql.createConnection({
     host: process.env.DBHOST,
     user: process.env.DBUUSER,
